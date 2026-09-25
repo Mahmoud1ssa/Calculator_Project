@@ -40,7 +40,7 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
-            this.btnPoint = new System.Windows.Forms.Button();
+            this.btnDot = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
@@ -53,12 +53,11 @@
             this.txtResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResults.ForeColor = System.Drawing.Color.Black;
+            this.txtResults.ForeColor = System.Drawing.Color.White;
             this.txtResults.Location = new System.Drawing.Point(12, 25);
-            this.txtResults.Multiline = true;
             this.txtResults.Name = "txtResults";
             this.txtResults.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.txtResults.Size = new System.Drawing.Size(395, 56);
+            this.txtResults.Size = new System.Drawing.Size(395, 45);
             this.txtResults.TabIndex = 0;
             // 
             // btn7
@@ -71,8 +70,10 @@
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(121, 56);
             this.btn7.TabIndex = 1;
+            this.btn7.Tag = "7";
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btn8
             // 
@@ -84,8 +85,10 @@
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(121, 56);
             this.btn8.TabIndex = 2;
+            this.btn8.Tag = "8";
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = true;
+            this.btn8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btn9
             // 
@@ -97,8 +100,10 @@
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(121, 56);
             this.btn9.TabIndex = 3;
+            this.btn9.Tag = "9";
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btn4
             // 
@@ -110,8 +115,10 @@
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(121, 56);
             this.btn4.TabIndex = 4;
+            this.btn4.Tag = "4";
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btn5
             // 
@@ -123,8 +130,10 @@
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(121, 56);
             this.btn5.TabIndex = 5;
+            this.btn5.Tag = "5";
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = true;
+            this.btn5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btn6
             // 
@@ -136,8 +145,10 @@
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(121, 56);
             this.btn6.TabIndex = 6;
+            this.btn6.Tag = "6";
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btn1
             // 
@@ -149,8 +160,10 @@
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(121, 56);
             this.btn1.TabIndex = 7;
+            this.btn1.Tag = "1";
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btn2
             // 
@@ -162,8 +175,10 @@
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(121, 56);
             this.btn2.TabIndex = 8;
+            this.btn2.Tag = "2";
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btn3
             // 
@@ -175,8 +190,10 @@
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(121, 56);
             this.btn3.TabIndex = 9;
+            this.btn3.Tag = "3";
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
             // btnDelete
             // 
@@ -190,6 +207,7 @@
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Del";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btn0
             // 
@@ -201,21 +219,25 @@
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(121, 56);
             this.btn0.TabIndex = 11;
+            this.btn0.Tag = "0";
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
+            this.btn0.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnNumber_Click);
             // 
-            // btnPoint
+            // btnDot
             // 
-            this.btnPoint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.btnPoint.ForeColor = System.Drawing.Color.White;
-            this.btnPoint.Location = new System.Drawing.Point(286, 314);
-            this.btnPoint.Name = "btnPoint";
-            this.btnPoint.Size = new System.Drawing.Size(121, 56);
-            this.btnPoint.TabIndex = 12;
-            this.btnPoint.Text = ".";
-            this.btnPoint.UseVisualStyleBackColor = true;
+            this.btnDot.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDot.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.btnDot.ForeColor = System.Drawing.Color.White;
+            this.btnDot.Location = new System.Drawing.Point(286, 314);
+            this.btnDot.Name = "btnDot";
+            this.btnDot.Size = new System.Drawing.Size(121, 56);
+            this.btnDot.TabIndex = 12;
+            this.btnDot.Tag = ".";
+            this.btnDot.Text = ".";
+            this.btnDot.UseVisualStyleBackColor = true;
+            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
             // 
             // btnPlus
             // 
@@ -227,8 +249,10 @@
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(121, 56);
             this.btnPlus.TabIndex = 13;
+            this.btnPlus.Tag = "+";
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOperation_Click);
             // 
             // btnMinus
             // 
@@ -240,8 +264,10 @@
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(121, 56);
             this.btnMinus.TabIndex = 14;
+            this.btnMinus.Tag = "-";
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOperation_Click);
             // 
             // btnMultiply
             // 
@@ -253,8 +279,10 @@
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(121, 56);
             this.btnMultiply.TabIndex = 15;
+            this.btnMultiply.Tag = "*";
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOperation_Click);
             // 
             // btnDivide
             // 
@@ -266,8 +294,10 @@
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(121, 56);
             this.btnDivide.TabIndex = 16;
+            this.btnDivide.Tag = "/";
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOperation_Click);
             // 
             // btnResult
             // 
@@ -279,8 +309,10 @@
             this.btnResult.Name = "btnResult";
             this.btnResult.Size = new System.Drawing.Size(121, 56);
             this.btnResult.TabIndex = 18;
+            this.btnResult.Tag = "=";
             this.btnResult.Text = "=";
             this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // frmCalculator
             // 
@@ -293,7 +325,7 @@
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.btnPlus);
-            this.Controls.Add(this.btnPoint);
+            this.Controls.Add(this.btnDot);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btn3);
@@ -328,7 +360,7 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btn0;
-        private System.Windows.Forms.Button btnPoint;
+        private System.Windows.Forms.Button btnDot;
         private System.Windows.Forms.Button btnPlus;
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnMultiply;
