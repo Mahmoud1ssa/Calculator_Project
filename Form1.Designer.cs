@@ -339,6 +339,7 @@
             this.Controls.Add(this.btn7);
             this.Controls.Add(this.txtResults);
             this.Name = "frmCalculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.frmCalculator_Paint);
             this.ResumeLayout(false);
