@@ -15,7 +15,7 @@ namespace Calculator_Project
     enum enStupidAttemptCasesHandling
     {
         enCaseResultPressAtStart = 0, enImpossibleDeviding = 1, 
-        enCaseDoublyDotIn1NumberString = 2, enCaseOperationButtonPressedDoubly = 3
+        enCaseDoublyDotIn1NumberString = 2, enCaseOperationButtonPressedWithNoNumbertoDealWith = 3
     }
 
     // Enum that has cases for any Operation button press by user...
@@ -90,7 +90,7 @@ namespace Calculator_Project
                         }
                         break;
                     }
-                case enStupidAttemptCasesHandling.enCaseOperationButtonPressedDoubly:
+                case enStupidAttemptCasesHandling.enCaseOperationButtonPressedWithNoNumbertoDealWith:
                     {
                         // This if statement deals with case the user pressed double times or more on an operation button.
                         if (txtResults.Text == "")
@@ -202,7 +202,7 @@ namespace Calculator_Project
                         if (Number2 == null)
                         {
                             // This if statement deals with case the user pressed double times or more on an operation button.
-                            if (HandlingStupidAttempt(enStupidAttemptCasesHandling.enCaseOperationButtonPressedDoubly))
+                            if (HandlingStupidAttempt(enStupidAttemptCasesHandling.enCaseOperationButtonPressedWithNoNumbertoDealWith))
                             {
                                 return true;
                             }
@@ -221,6 +221,10 @@ namespace Calculator_Project
 
         private void btnOperation_Click(object sender, MouseEventArgs e)
         {
+            // This if statement deals with case the user pressed an operation button at start.
+            if (HandlingStupidAttempt(enStupidAttemptCasesHandling.enCaseOperationButtonPressedWithNoNumbertoDealWith))
+                return;
+
             //To Get the type of the operation...
             Button btnOperation = sender as Button;
             OperationType = Convert.ToString(btnOperation.Tag);
